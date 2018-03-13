@@ -20,5 +20,6 @@ export default {
   Country: get('Country'),
   Director: get('Director'),
   'Director of photography': get('DirectorOfPhotography'),
-  'Award winner': get('AwardWinner')
+  'Award winner': get('AwardWinner'),
+  Composer: get('Composer')
 }
