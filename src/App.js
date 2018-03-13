@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import FlexView from 'react-flexview';
 import shuffle from 'lodash/shuffle';
-import * as requests from './requests';
+import levels from './requests';
 
 import 'react-flexview/lib/flexView.css';
-
-const levels = {
-  Keyword: requests.getKeyword,
-  Genre: requests.getGenre,
-  Country: requests.getCountry,
-  Director: requests.getDirector,
-  'Director of photography': requests.getPhotographyDirector,
-  'Award winner': requests.getWinnerOfAFestival
-}
 
 const Level = ({ content }) => (
   <FlexView
