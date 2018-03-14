@@ -1,4 +1,5 @@
 import shuffle from 'lodash/shuffle';
+import config from './config.json';
 
 function getRandom(res) {
   return shuffle(
@@ -9,7 +10,7 @@ function getRandom(res) {
 }
 
 const get = table => () => (
-  fetch(`https://api.airtable.com/v0/appDKKt5lJdd7maB1/${table}?api_key=keyRXab9tyXiaFoAd`)
+  fetch(`https://api.airtable.com/v0/appDKKt5lJdd7maB1/${table}?api_key=${config.airTableApiKey}`)
     .then(res => res.json())
     .then(getRandom)
 );
